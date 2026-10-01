@@ -9,6 +9,7 @@ No setup needed. Each badge opens the file in a free online Python editor and ru
 | File | |
 | --- | --- |
 | [`Sinusoida-Amp-Modulated.py`](./Sinusoida-Amp-Modulated.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Sinusoida-Amp-Modulated.py) |
+| [`Sinusoida-Freq-Modulated.py`](./Sinusoida-Freq-Modulated.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Sinusoida-Freq-Modulated.py) |
 | [`Sinusoida.py`](./Sinusoida.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Sinusoida.py) |
 | [`Urojona-eksponenta.py`](./Urojona-eksponenta.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Urojona-eksponenta.py) |
 | [`eksponenta.py`](./eksponenta.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/eksponenta.py) |
