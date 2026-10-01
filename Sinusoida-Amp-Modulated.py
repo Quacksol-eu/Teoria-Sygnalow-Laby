@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 Omega0 = 10
 Omega1 = 1
-Tmax = 10
+Tmax = 25
 C = 0.5
 fi = (1/2 * np.pi) * 0
 
