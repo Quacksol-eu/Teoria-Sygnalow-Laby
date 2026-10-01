@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 a = -0.01
-C = 4
+C = 1e4
 Tmax = 100
 
 t = np.linspace(-Tmax, Tmax, num=2*Tmax+1)
@@ -15,4 +15,4 @@ plt.title('x(t) = C*exp(at)')
 plt.legend([ 'a=' + str(a) + ',C=' + str(C) ])
 plt.grid(True)
 
-print("dzialam")
+print("dzialam
