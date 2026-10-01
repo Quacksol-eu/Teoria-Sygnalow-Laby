@@ -1,13 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-Omega0 = 1
-Omega1 = 0.1
-Tmax = 100
-C = 10
-fi = 1/2 * np.pi
+Omega0 = 10
+Omega1 = 1
+Tmax = 20
+C = 5
+fi = 0
 
-t = np.linspace(-Tmax, Tmax, num=1000)
+t = np.linspace(0, Tmax, num=1000)
 x = np.cos(Omega0 * t + C * np.cos(Omega1*t))
 
 plt.plot(t, x, 'b.-')
