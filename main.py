@@ -14,5 +14,3 @@ plt.ylabel('x(t)')
 plt.title('x(t) = C*exp(at)')
 plt.legend([ 'a=' + str(a) + ',C=' + str(C) ])
 plt.grid(True)
-
-print("dzialam
