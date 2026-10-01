@@ -14,9 +14,9 @@ plt.plot(t, x, 'b.-')
 plt.xlabel('t (s)')
 plt.ylabel('x(t)')
 
-plt.title('x(t) = (1 + C * cos(Omega1 * t)) * cos(Omega0 * t + fi)')
+plt.title('x(t) = cos(Omega0 * t + C * cos(Omega1 * t))')
 
-#plt.legend(['Omega0=' + str(Omega0) + ', Omega1=' + str(Omega1) + ', fi=' + str(fi) + ', C=' + str(C) + ', Tmax=' + str(Tmax)])
+#plt.legend(['Omega0=' + str(Omega0) + ', Omega1=' + str(Omega1) + ', C=' + str(C) + ', Tmax=' + str(Tmax)])
 
 plt.grid(True)
 plt.show()
