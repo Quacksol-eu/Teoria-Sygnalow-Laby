@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 Tmax = 3.0
-q = 50
+q = 500
 
 t = np.linspace(-Tmax, Tmax, num=q)
 tau = np.linspace(-Tmax, Tmax, num=q)
