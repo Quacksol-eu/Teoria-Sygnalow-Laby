@@ -13,14 +13,13 @@ y = np.zeros(q)
 for i in range(q):
     I = 0.0
     for j in range(q):
-        tau_val = tau[j]
 
-        if tau_val >= -1 and tau_val <= 1:
+        if tau[j] >= -1 and tau[j] <= 1:
             x_val = 0.5
         else:
             x_val = 0.0
             
-        arg = t[i] - tau_val
+        arg = t[i] - tau[j]
         if arg >= -1 and arg <= 1:
             h_val = 1 + arg
         else:
