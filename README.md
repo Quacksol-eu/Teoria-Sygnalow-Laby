@@ -15,6 +15,7 @@ No setup needed. Each badge opens the file in a free online Python editor and ru
 | [`calka_przyblizana_metoda_trapezow.py`](./calka_przyblizana_metoda_trapezow.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/calka_przyblizana_metoda_trapezow.py) |
 | [`calka_przyblizana_prostokatami.py`](./calka_przyblizana_prostokatami.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/calka_przyblizana_prostokatami.py) |
 | [`eksponenta.py`](./eksponenta.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/eksponenta.py) |
+| [`splot.py`](./splot.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/splot.py) |
 | [`tlumiona-sinusoida.py`](./tlumiona-sinusoida.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/tlumiona-sinusoida.py) |
 
 Made with [pythoncompiler.io](https://pythoncompiler.io/?utm_source=github&utm_medium=practice-repo) - the free online Python compiler.
