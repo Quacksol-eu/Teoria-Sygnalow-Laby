@@ -11,7 +11,7 @@ x = np.where(np.abs(t_mod) < T1, 1, 0)
 
 k = np.arange(-15, 16)
 Omega0 = (2 * np.pi) / T0
-ak = np.where(k == 0, (2 * T1) / T0, np.sin(k * Omega0 * T1) / (k * Omega0))
+ak = np.where(k == 0, (2 * T1)/ T0, np.sin(k * Omega0 * T1) / (k * np.pi))
 
 plt.figure(figsize=(12, 4))
 
