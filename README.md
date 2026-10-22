@@ -8,6 +8,7 @@ No setup needed. Each badge opens the file in a free online Python editor and ru
 
 | File | |
 | --- | --- |
+| [`CalkaFourier.py`](./CalkaFourier.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/CalkaFourier.py) |
 | [`Fourier_Aprox_Error.py`](./Fourier_Aprox_Error.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Fourier_Aprox_Error.py) |
 | [`Sinusoida-Amp-Modulated.py`](./Sinusoida-Amp-Modulated.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Sinusoida-Amp-Modulated.py) |
 | [`Sinusoida-Freq-Modulated.py`](./Sinusoida-Freq-Modulated.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Sinusoida-Freq-Modulated.py) |
