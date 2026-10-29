@@ -5,7 +5,7 @@ from scipy import signal
 f0 = 50.0
 omega0 = 2 * np.pi * f0
 
-a = 10.0       
+a = -10.0       
 b = omega0    
 c = 10.0  
 
@@ -16,7 +16,7 @@ gain = 1.0
 filt_system = signal.ZerosPolesGain(zeros, poles, gain)
 
 # --- Przygotowanie danych ---
-t, y_imp = signal.impulse((zeros, poles, gain), T=np.linspace(0, 0.01, 100000))
+t, y_imp = signal.impulse((zeros, poles, gain), T=np.linspace(0, 0.2, 1000))
 
 frequencies = np.linspace(0, 2*f0, 1000)
 omega = 2 * np.pi * frequencies
