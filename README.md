@@ -11,6 +11,7 @@ No setup needed. Each badge opens the file in a free online Python editor and ru
 | [`CalkaFourier.py`](./CalkaFourier.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/CalkaFourier.py) |
 | [`Fourier_Aprox_Error.py`](./Fourier_Aprox_Error.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Fourier_Aprox_Error.py) |
 | [`Funkcje_Nie_Drichleta.py`](./Funkcje_Nie_Drichleta.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Funkcje_Nie_Drichleta.py) |
+| [`Notch_Filter.py`](./Notch_Filter.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Notch_Filter.py) |
 | [`Sinusoida-Amp-Modulated.py`](./Sinusoida-Amp-Modulated.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Sinusoida-Amp-Modulated.py) |
 | [`Sinusoida-Freq-Modulated.py`](./Sinusoida-Freq-Modulated.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Sinusoida-Freq-Modulated.py) |
 | [`Sinusoida.py`](./Sinusoida.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Sinusoida.py) |
