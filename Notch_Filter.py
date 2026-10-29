@@ -5,7 +5,7 @@ from scipy import signal
 f0 = 50.0
 omega0 = 2 * np.pi * f0
 
-a = 10.0       
+a = 0.0       
 b = omega0    
 c = 10.0  
 
