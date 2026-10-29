@@ -11,6 +11,9 @@ omega_stop = 2 * np.pi * f_stop
 Rp = 1.0   # Dopuszczalne falowanie w pasmie przepustowym (dB)
 Rs = 30.0  # Minimalne tłumienie w pasmie zaporowym (dB)
 
+# --- Wybór filtru do wyróżnienia (1: Butterworth, 2: Chebyshev I, 3: Chebyshev II, 4: Elliptic, 5: Bessel) ---
+Selected_Filter = 1
+
 # --- Wyznaczanie rzędów i projektowanie filtrów ---
 N_butt, Wn_butt = signal.buttord(omega_pass, omega_stop, Rp, Rs, analog=True)
 b_butt, a_butt = signal.butter(N_butt, Wn_butt, btype='low', analog=True)
@@ -55,6 +58,15 @@ _, y_cheb2 = signal.impulse((b_cheb2, a_cheb2), T=t)
 _, y_ellip = signal.impulse((b_ellip, a_ellip), T=t)
 _, y_bessel = signal.impulse((b_bessel, a_bessel), T=t)
 
+# Lista strukturyzująca filtry dla łatwego i czystego rysowania
+filters_data = [
+    {"id": 1, "name": f"Butterworth (N={N_butt})", "short": "Butterworth", "mag": mag_b, "phase": phase_b, "y": y_butt, "poles": p_butt},
+    {"id": 2, "name": f"Chebyshev I (N={N_cheb1})", "short": "Chebyshev I", "mag": mag_c1, "phase": phase_c1, "y": y_cheb1, "poles": p_cheb1},
+    {"id": 3, "name": f"Chebyshev II (N={N_cheb2})", "short": "Chebyshev II", "mag": mag_c2, "phase": phase_c2, "y": y_cheb2, "poles": p_cheb2},
+    {"id": 4, "name": f"Elliptic (N={N_ellip})", "short": "Elliptic", "mag": mag_e, "phase": phase_e, "y": y_ellip, "poles": p_ellip},
+    {"id": 5, "name": f"Bessel (N={N_bessel})", "short": "Bessel", "mag": mag_bes, "phase": phase_bes, "y": y_bessel, "poles": p_bessel},
+]
+
 # ==========================================
 # GŁÓWNE OKNO Z UKŁADEM 3x2 (5 WYKRESÓW)
 # ==========================================
@@ -63,12 +75,30 @@ ax1, ax2 = axes[0]
 ax3, ax4 = axes[1]
 ax5, ax6 = axes[2]
 
-# 1. Charakterystyka amplitudowa (pełna)
-ax1.plot(frequencies, mag_b, label=f'Butterworth (N={N_butt})')
-ax1.plot(frequencies, mag_c1, label=f'Chebyshev I (N={N_cheb1})')
-ax1.plot(frequencies, mag_c2, label=f'Chebyshev II (N={N_cheb2})')
-ax1.plot(frequencies, mag_e, label=f'Elliptic (N={N_ellip})')
-ax1.plot(frequencies, mag_bes, label=f'Bessel (N={N_bessel})')
+# Rysowanie charakterystyk z uwzględnieniem wybranego filtru
+for f in filters_data:
+    is_selected = (f["id"] == Selected_Filter)
+    color = 'red' if is_selected else 'gray'
+    alpha = 1.0 if is_selected else 0.35
+    linewidth = 2.2 if is_selected else 1.0
+    zorder = 10 if is_selected else 1
+
+    # 1. Charakterystyka amplitudowa (pełna)
+    ax1.plot(frequencies, f["mag"], color=color, alpha=alpha, linewidth=linewidth, zorder=zorder, label=f["name"])
+
+    # 2. Przybliżenie początku charakterystyki amplitudowej (pasmo przepustowe)
+    ax2.plot(frequencies, f["mag"], color=color, alpha=alpha, linewidth=linewidth, zorder=zorder, label=f["short"])
+
+    # 3. Charakterystyka fazowa
+    ax3.plot(frequencies, f["phase"], color=color, alpha=alpha, linewidth=linewidth, zorder=zorder, label=f["short"])
+
+    # 4. Odpowiedź impulsowa
+    ax4.plot(t * 1000, f["y"], color=color, alpha=alpha, linewidth=linewidth, zorder=zorder, label=f["short"])
+
+    # 5. Rozmieszczenie biegunów na płaszczyźnie zespolonej
+    ax5.plot(np.real(f["poles"]), np.imag(f["poles"]), 'x', color=color, alpha=alpha, markersize=8, zorder=zorder, label=f["short"])
+
+# Dodatkowe linie i opisy dla wykresów amplitudowych
 ax1.axvline(f_pass, color='gray', linestyle='--', alpha=0.7, label='F_pass')
 ax1.axvline(f_stop, color='black', linestyle='--', alpha=0.7, label='F_stop')
 ax1.axhline(-Rp, color='blue', linestyle=':', alpha=0.5)
@@ -81,12 +111,6 @@ ax1.set_ylim(-50, 5)
 ax1.grid(True, linestyle=':', alpha=0.7)
 ax1.legend(loc='lower left', fontsize=8)
 
-# 2. Przybliżenie początku charakterystyki amplitudowej (pasmo przepustowe)
-ax2.plot(frequencies, mag_b, label='Butterworth')
-ax2.plot(frequencies, mag_c1, label='Chebyshev I')
-ax2.plot(frequencies, mag_c2, label='Chebyshev II')
-ax2.plot(frequencies, mag_e, label='Elliptic')
-ax2.plot(frequencies, mag_bes, label='Bessel')
 ax2.axvline(f_pass, color='gray', linestyle='--', alpha=0.7, label='F_pass')
 ax2.axhline(-Rp, color='blue', linestyle=':', alpha=0.5, label=f'-Rp ({Rp} dB)')
 ax2.set_title('Przybliżenie pasma przepustowego (Początek)')
@@ -97,12 +121,6 @@ ax2.set_ylim(-2.0, 0.5)
 ax2.grid(True, linestyle=':', alpha=0.7)
 ax2.legend(loc='lower left', fontsize=8)
 
-# 3. Charakterystyka fazowa
-ax3.plot(frequencies, phase_b, label='Butterworth')
-ax3.plot(frequencies, phase_c1, label='Chebyshev I')
-ax3.plot(frequencies, phase_c2, label='Chebyshev II')
-ax3.plot(frequencies, phase_e, label='Elliptic')
-ax3.plot(frequencies, phase_bes, label='Bessel')
 ax3.set_title('Charakterystyka fazowa')
 ax3.set_xlabel('Częstotliwość f (Hz)')
 ax3.set_ylabel('Faza (stopnie)')
@@ -110,24 +128,12 @@ ax3.set_xlim(0, 2.5 * f_pass)
 ax3.grid(True, linestyle=':', alpha=0.7)
 ax3.legend(loc='lower left', fontsize=8)
 
-# 4. Odpowiedź impulsowa
-ax4.plot(t * 1000, y_butt, label='Butterworth')
-ax4.plot(t * 1000, y_cheb1, label='Chebyshev I')
-ax4.plot(t * 1000, y_cheb2, label='Chebyshev II')
-ax4.plot(t * 1000, y_ellip, label='Elliptic')
-ax4.plot(t * 1000, y_bessel, label='Bessel')
 ax4.set_title('Odpowiedź impulsowa')
 ax4.set_xlabel('Czas t (ms)')
 ax4.set_ylabel('h(t)')
 ax4.grid(True, linestyle=':', alpha=0.7)
 ax4.legend(loc='upper right', fontsize=8)
 
-# 5. Rozmieszczenie biegunów na płaszczyźnie zespolonej
-ax5.plot(np.real(p_butt), np.imag(p_butt), 'rx', label='Butterworth')
-ax5.plot(np.real(p_cheb1), np.imag(p_cheb1), 'gx', label='Chebyshev I')
-ax5.plot(np.real(p_cheb2), np.imag(p_cheb2), 'bx', label='Chebyshev II')
-ax5.plot(np.real(p_ellip), np.imag(p_ellip), 'cx', label='Elliptic')
-ax5.plot(np.real(p_bessel), np.imag(p_bessel), 'mx', label='Bessel')
 ax5.spines['left'].set_position('zero')
 ax5.spines['bottom'].set_position('zero')
 ax5.spines['right'].set_color('none')
