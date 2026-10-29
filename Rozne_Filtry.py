@@ -12,7 +12,7 @@ Rp = 1.0   # Dopuszczalne falowanie w pasmie przepustowym (dB)
 Rs = 30.0  # Minimalne tłumienie w pasmie zaporowym (dB)
 
 # --- Wybór filtru do wyróżnienia (1: Butterworth, 2: Chebyshev I, 3: Chebyshev II, 4: Elliptic, 5: Bessel) ---
-Selected_Filter = 1
+Selected_Filter = 2
 
 # --- Wyznaczanie rzędów i projektowanie filtrów ---
 N_butt, Wn_butt = signal.buttord(omega_pass, omega_stop, Rp, Rs, analog=True)
