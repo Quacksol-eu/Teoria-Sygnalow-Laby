@@ -1,5 +1,3 @@
-# python-practice
-My Python practice, runnable at pythoncompiler.io
 
 <!-- pythoncompiler:files -->
 ## Run these files in your browser
