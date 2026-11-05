@@ -2,16 +2,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import signal
 
-b = [1.0, 0.5]
-a = [1.0, -0.6]
+# Projekt filtra elipsowego 4. rzędu
+b, a = signal.ellip(4, 3, 40, 0.5)
 
 N = len(a) - 1
 M = len(b) - 1
 
 N_samples = 40
 n = np.arange(0, N_samples)
-x = np.zeros(N_samples)
-x[0] = 1.0  
+x = np.ones(N_samples)
 
 # Implementacja własna równania różnicowego N-tego rzędu
 y_manual = np.zeros(N_samples)
@@ -35,13 +34,13 @@ fig, axes = plt.subplots(2, 1, figsize=(12, 8))
 axes = axes.flatten()
 
 axes[0].plot(n, y_manual, 'b-o', markersize=4)
-axes[0].set_title('Implementacja własna')
+axes[0].set_title('Implementacja własna (filtr elipsowy)')
 axes[0].set_xlabel('Indeks próbki n')
 axes[0].set_ylabel('y[n]')
 axes[0].grid(True, linestyle=':', alpha=0.7)
 
 axes[1].plot(n, y_builtin, 'r-o', markersize=4)
-axes[1].set_title('Funkcja scipy.signal.lfilter')
+axes[1].set_title('Funkcja scipy.signal.lfilter (filtr elipsowy)')
 axes[1].set_xlabel('Indeks próbki n')
 axes[1].set_ylabel('y[n]')
 axes[1].grid(True, linestyle=':', alpha=0.7)
