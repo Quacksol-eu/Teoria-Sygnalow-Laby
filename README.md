@@ -10,6 +10,7 @@ No setup needed. Each badge opens the file in a free online Python editor and ru
 | [`Difference_Equation.py`](./Difference_Equation.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Difference_Equation.py) |
 | [`Fourier_Aprox_Error.py`](./Fourier_Aprox_Error.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Fourier_Aprox_Error.py) |
 | [`Funkcje_Nie_Drichleta.py`](./Funkcje_Nie_Drichleta.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Funkcje_Nie_Drichleta.py) |
+| [`Not_a_Task.py`](./Not_a_Task.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Not_a_Task.py) |
 | [`Notch_Disc_Imp-Step.py`](./Notch_Disc_Imp-Step.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Notch_Disc_Imp-Step.py) |
 | [`Notch_Filter.py`](./Notch_Filter.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Notch_Filter.py) |
 | [`Nothc_Disk_Phase.py`](./Nothc_Disk_Phase.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Nothc_Disk_Phase.py) |
