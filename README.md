@@ -12,6 +12,7 @@ No setup needed. Each badge opens the file in a free online Python editor and ru
 | [`Funkcje_Nie_Drichleta.py`](./Funkcje_Nie_Drichleta.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Funkcje_Nie_Drichleta.py) |
 | [`Notch_Disc_Imp-Step.py`](./Notch_Disc_Imp-Step.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Notch_Disc_Imp-Step.py) |
 | [`Notch_Filter.py`](./Notch_Filter.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Notch_Filter.py) |
+| [`Nothc_Disk_Phase.py`](./Nothc_Disk_Phase.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Nothc_Disk_Phase.py) |
 | [`Odpowiedz_Czestoliowsciowa.py`](./Odpowiedz_Czestoliowsciowa.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Odpowiedz_Czestoliowsciowa.py) |
 | [`Rozne_Filtry.py`](./Rozne_Filtry.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Rozne_Filtry.py) |
 | [`Sinusoida-Amp-Modulated.py`](./Sinusoida-Amp-Modulated.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Sinusoida-Amp-Modulated.py) |
