@@ -8,6 +8,7 @@ No setup needed. Each badge opens the file in a free online Python editor and ru
 | --- | --- |
 | [`CalkaFourier.py`](./CalkaFourier.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/CalkaFourier.py) |
 | [`Difference_Equation.py`](./Difference_Equation.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Difference_Equation.py) |
+| [`Filtry_IIR.py`](./Filtry_IIR.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Filtry_IIR.py) |
 | [`Fourier_Aprox_Error.py`](./Fourier_Aprox_Error.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Fourier_Aprox_Error.py) |
 | [`Funkcje_Nie_Drichleta.py`](./Funkcje_Nie_Drichleta.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Funkcje_Nie_Drichleta.py) |
 | [`Not_a_Task.py`](./Not_a_Task.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Not_a_Task.py) |
