@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from scipy import signal
 
 Fs = 200.0
-f0 = 50.0
+f0 = 100.0
 omega_notch = 2 * np.pi * f0 / Fs
 
 r1 = 1.0 
