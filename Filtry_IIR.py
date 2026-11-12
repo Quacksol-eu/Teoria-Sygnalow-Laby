@@ -40,8 +40,10 @@ n = np.arange(0, N_samples)
 x_imp = np.zeros(N_samples)
 x_imp[0] = 1.0
 
-# Tworzenie siatki wykresów 4x3 (łącznie 12 wykresów)
-fig, axes = plt.subplots(4, 3, figsize=(16, 12))
+theta = np.linspace(0, 2*np.pi, 100)
+
+# Tworzenie siatki wykresów 4x4 (łącznie 16 wykresów)
+fig, axes = plt.subplots(4, 4, figsize=(20, 12))
 
 for i, (name, b, a, order) in enumerate(filters):
     # Odpowiedź częstotliwościowa
@@ -52,10 +54,14 @@ for i, (name, b, a, order) in enumerate(filters):
     # Odpowiedź impulsowa
     y_imp = signal.lfilter(b, a, x_imp)
     
+    # Zera i bieguny
+    z, p, k = signal.tf2zpk(b, a)
+    
     # Kolumna 0: Charakterystyka amplitudowa
     axes[i, 0].plot(f, mag_db, 'b-', linewidth=1.5)
     axes[i, 0].set_title(f'{name} (N={order}) - Amplituda')
     axes[i, 0].set_ylabel('Amplituda [dB]')
+    axes[i, 0].set_xlabel('Częstotliwość [Hz]')
     axes[i, 0].grid(True, linestyle=':', alpha=0.7)
     axes[i, 0].axvline(fp, color='gray', linestyle='--', alpha=0.7)
     
@@ -63,17 +69,26 @@ for i, (name, b, a, order) in enumerate(filters):
     axes[i, 1].plot(f, phase, 'r-', linewidth=1.5)
     axes[i, 1].set_title(f'{name} - Faza')
     axes[i, 1].set_ylabel('Faza [rad]')
+    axes[i, 1].set_xlabel('Częstotliwość [Hz]')
     axes[i, 1].grid(True, linestyle=':', alpha=0.7)
     
     # Kolumna 2: Odpowiedź impulsowa
     axes[i, 2].stem(n, y_imp, linefmt='g-', markerfmt='go', basefmt='k-')
     axes[i, 2].set_title(f'{name} - Odp. impulsowa')
     axes[i, 2].set_ylabel('y[n]')
+    axes[i, 2].set_xlabel('Indeks próbki n')
     axes[i, 2].grid(True, linestyle=':', alpha=0.7)
-
-    # Etykiety osi X
-    for col in range(3):
-        axes[i, col].set_xlabel('Częstotliwość [Hz]' if col < 2 else 'Indeks próbki n')
+    
+    # Kolumna 3: Zera i bieguny (Pole-Zero)
+    axes[i, 3].plot(np.cos(theta), np.sin(theta), 'k--', alpha=0.5)
+    axes[i, 3].plot(np.real(z), np.imag(z), 'go', markerfacecolor='none', label='Zera')
+    axes[i, 3].plot(np.real(p), np.imag(p), 'rx', label='Bieguny')
+    axes[i, 3].set_title(f'{name} - Zera i bieguny')
+    axes[i, 3].set_xlabel('Re')
+    axes[i, 3].set_ylabel('Im')
+    axes[i, 3].grid(True, linestyle=':', alpha=0.7)
+    axes[i, 3].axis('equal')
+    axes[i, 3].legend(loc='upper left', fontsize='small')
 
 plt.tight_layout()
 plt.show()
