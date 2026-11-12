@@ -7,7 +7,7 @@ f0 = 50.0
 omega = 2 * np.pi * f0 / Fs
 
 r1 = 1  # promień zera
-r2 = 0.1  # promień bieguna
+r2 = 0.9  # promień bieguna
 
 b = np.array([1.0, -2.0 * r1 * np.cos(omega), r1**2])
 a = np.array([1.0, -2.0 * r2 * np.cos(omega), r2**2])
