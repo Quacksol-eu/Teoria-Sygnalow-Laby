@@ -8,6 +8,7 @@ No setup needed. Each badge opens the file in a free online Python editor and ru
 | --- | --- |
 | [`CalkaFourier.py`](./CalkaFourier.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/CalkaFourier.py) |
 | [`Difference_Equation.py`](./Difference_Equation.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Difference_Equation.py) |
+| [`FIR_Okno_Prostokatne.py`](./FIR_Okno_Prostokatne.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/FIR_Okno_Prostokatne.py) |
 | [`FIR_Rozne_Okna.py`](./FIR_Rozne_Okna.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/FIR_Rozne_Okna.py) |
 | [`Filtry_IIR.py`](./Filtry_IIR.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Filtry_IIR.py) |
 | [`Fourier_Aprox_Error.py`](./Fourier_Aprox_Error.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/Fourier_Aprox_Error.py) |
