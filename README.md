@@ -7,6 +7,7 @@ No setup needed. Each badge opens the file in a free online Python editor and ru
 | File | |
 | --- | --- |
 | [`CalkaFourier.py`](./CalkaFourier.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/CalkaFourier.py) |
+| [`DFT_Analysis12.py`](./DFT_Analysis12.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/DFT_Analysis12.py) |
 | [`DFT_Analysis3.py`](./DFT_Analysis3.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/DFT_Analysis3.py) |
 | [`DFT_Analysis4.py`](./DFT_Analysis4.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/DFT_Analysis4.py) |
 | [`DFT_definiton.py`](./DFT_definiton.py) | [![Run in Python Compiler](https://pythoncompiler.io/badge-run.svg)](https://pythoncompiler.io/?gh=Quacksol-eu/python-practice/main/DFT_definiton.py) |
